@@ -1,0 +1,26 @@
+{% extends "bootstrap/base.html" %}
+
+{%- block metas %}
+    {{ super() }}
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+{%- endblock metas %}    
+
+{%- block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', _external=True) }}">
+{%- endblock styles %}
+
+{% block navbar %}
+<header class="row" id="header-content">
+    <img src="{{ url_for('static', filename='car.jpg', _external=True) }}">
+</header>
+{%- endblock navbar %}
+
+{% block body -%}
+<div class="content">
+
+    {{ super() }}
+
+</div>
+{%- endblock body %}

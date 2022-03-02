@@ -1,0 +1,18 @@
+# This section is for basic values applicable to the application in general
+[DEFAULT]
+SECRET_KEY = longstringofcharacters
+
+# Parameters for session configuration
+[SESSION]
+SESSION_PERMANENT = False
+SESSION_TYPE = filesystem
+
+
+# This section could have email server connection info, default values provided
+[EMAIL]
+MAIL_SERVER= localhost
+MAIL_PORT = 25
+MAIL_USE_TLS = False
+MAIL_USE_SSL = False
+MAIL_USERNAME = None
+MAIL_PASSWORD = None
