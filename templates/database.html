@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block title %}
+    CSC206 Databases
+{% endblock %}        
+
+
+{% block body %}
+
+<h1>Hello!!!!!</h1>
+<p>Let's list some people</p>
+
+<ul>
+{% for person in people %}
+{% for address in person.addresses %}
+        <li><b>{{person.name}}</b> has a username of <b>{{person.username}}</b> and an {{ address.type }} address of <b>{{ address.address }}</b></li>
+{% endfor %}        
+{% endfor %}
+</ul>
+
+{% endblock %}

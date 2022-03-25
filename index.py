@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, make_response, session
+from flask import Flask, render_template, request, make_response, session, flash
 from flask_bootstrap import Bootstrap
 from flask_session import Session
 import configparser
@@ -25,14 +25,26 @@ Bootstrap(app)
 Session(app)
 
 
-
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
 
     session["name"] = "Scott"
+    session["employer"] = "Geneva College"
+
+    flash(session["name"])
+    flash(session["employer"])
+
     print(app.config["SECRET_KEY"])
 
     return render_template('index.html')
+
+
+@app.route('/', methods=['POST'])
+def process_form():
+
+   upperlimit = request.form['upperlimit']
+   return '<h1>Upper limit: {}</h1>'.format(upperlimit)
+
 
 if __name__ == '__main__':
     app.debug = True

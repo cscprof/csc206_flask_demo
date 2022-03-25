@@ -3,6 +3,28 @@
 
 
 {% block content -%}
-<h1>Flask Bootstrap -  {{ session.name }}</h1>
+
+{% for message in get_flashed_messages() %}
+<div class="alert-success">
+    <p class="h3 text-center py-2 my-2">{{ message }}</p>
+</div>
+{% endfor %}
+
+
+
+<h1>Flask Bootstrap - {{ session.name }} from {{ session.employer }}</h1>
 <p>Sample site with flask_bootstrap in use</p>
+
+<form action="/" method="POST">
+    <div>
+        <label for="upperlimit">Enter the Upper Limit:</label>
+        <input name="upperlimit" id="uppewrlimit">
+    </div>
+
+    <div>
+        <input type="submit" name="submit" id="submit">
+    </div>
+</form>
+
+
 {%- endblock content %}
