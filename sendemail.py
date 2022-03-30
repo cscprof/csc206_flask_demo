@@ -8,7 +8,6 @@ config = configparser.ConfigParser()
 config.read('settings.conf')
 
 
-
 # Create the application instance
 app = Flask(__name__)
 app.config['SECRET_KEY'] = config["DEFAULT"]["SECRET_KEY"]
@@ -42,9 +41,10 @@ def sendemail():
     message['subject'].append(request.form.get('subject'))
     message['message'].append(request.form.get('message'))
 
-    send_email(message['email'], message['subject'], config["EMAIL"]["MAIL_FROM"], 'mail/email_sent', message=message)
+    send_email(message["email"], message["subject"][0], config["EMAIL"]["MAIL_FROM"], "mail/email_sent", message=message)
+    print(message)
 
-    return render_template('index.html')    
+    return render_template('email_create.html')    
 
 
 if __name__ == '__main__':
