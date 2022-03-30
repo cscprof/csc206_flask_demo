@@ -7,15 +7,28 @@
 
 {% block body %}
 
-<h1>Hello!!!!!</h1>
-<p>Let's list some people</p>
+<h1>Colleges and Majors</h1>
+<p>Partial list of majors available at selected colleges.</p>
 
-<ul>
-{% for person in people %}
-{% for address in person.addresses %}
-        <li><b>{{person.name}}</b> has a username of <b>{{person.username}}</b> and an {{ address.type }} address of <b>{{ address.address }}</b></li>
-{% endfor %}        
-{% endfor %}
-</ul>
+
+<table class="table table-striped">
+    <thead>
+        <th>College</th>
+        <th>Location</th>
+        <th>Major</th>
+        <th>Enrollment</th>
+    </thead>
+    <tbody>
+        {% for school in schools %}
+        <tr>
+            <td>{{school.School.name}}</td>
+            <td>{{school.School.state}}</td>
+            <td>{{school.Major.name}}</td>
+            <td>{{school.Association.enrollment}}</td> 
+        </tr>    
+        {% endfor %}
+    </tbody>
+</table>
+
 
 {% endblock %}

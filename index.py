@@ -24,7 +24,6 @@ Bootstrap(app)
 # Init session functions
 Session(app)
 
-
 @app.route('/', methods=['GET'])
 def index():
 
