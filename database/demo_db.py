@@ -32,8 +32,6 @@ class School(Base):
     def __repr__(self):
         return "<School(name='%s', state='%s', year_founded='%s', created_at='%s')>" % (self.name, self.state, self.year_founded, self.created_at)
 
-
-
 class Major(Base):
     __tablename__ = 'majors'
     id = Column(Integer, primary_key=True)
@@ -43,12 +41,3 @@ class Major(Base):
 
     def __repr__(self):
         return "<Major(major='%s', department='%s')>" % (self.name, self.department)
-
-    #school = relationship("School", back_populates = "majors")
-
-
-
-
-    
-    
-# User.addresses = relationship("Address", order_by = Address.id, back_populates = "user")

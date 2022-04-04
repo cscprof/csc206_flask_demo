@@ -2,7 +2,6 @@
 # Example from https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_working_with_related_objects.htm
 
 # import the framwework
-from datetime import datetime
 from enum import unique
 import os
 from flask import Flask, render_template, request
