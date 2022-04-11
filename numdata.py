@@ -26,20 +26,20 @@ rand = np.random.RandomState(seed)
 
 dist_list = ['uniform','normal','exponential','lognormal','chisquare','beta']
 param_list = ['-1,1','0,1','1','0,1','2','0.5,0.9']
-colors_list = ['green','blue','yellow','cyan','magenta','orange']
+colors_list = ['green','blue','red','cyan','magenta','orange']
 
 fig,ax = plt.subplots(nrows=2, ncols=3,figsize=(12,7))
 plt_ind_list = np.arange(6)+231
 
-ziplist = zip(dist_list, plt_ind_list, param_list, colors_list)
+# ziplist = zip(dist_list, plt_ind_list, param_list, colors_list)
 # print(list(ziplist))
 
 for dist, plt_ind, param, colors in zip(dist_list, plt_ind_list, param_list, colors_list):
     x = eval('rand.'+dist+'('+param+',5000)') 
-
+    
     # print('rand.'+ dist + "\n")    
     plt.subplot(plt_ind)
-    plt.hist(x,bins=50,color=colors)
+    plt.hist(x,bins=100,color=colors)
     plt.title(dist)
 
 fig.subplots_adjust(hspace=0.4,wspace=.3) 
