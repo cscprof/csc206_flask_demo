@@ -21,37 +21,37 @@ CURVE_CENTER = 80
 # print("Standard deviation of the grades is {} and the average is {} \n".format(std_dev, avg))
 
 
-axes_2d = np.arange(0,6).reshape([2,3])
+# axes_2d = np.arange(0,6).reshape([2,3])
 
-# Print the array
-print(axes_2d)
+# # Print the array
+# print(axes_2d)
 
-# Sum the full array
-sum_2d = np.sum(axes_2d)
-print("2D sum: {} \n".format(sum_2d))
+# # Sum the full array
+# sum_2d = np.sum(axes_2d)
+# print("2D sum: {} \n".format(sum_2d))
 
-# Sum the 0 axis
-sum_2d_0 = np.sum(axes_2d, axis=0)
-print(" Axis 0 sum:\n")
-print(sum_2d_0)
+# # Sum the 0 axis
+# sum_2d_0 = np.sum(axes_2d, axis=0)
+# print(" Axis 0 sum:\n")
+# print(sum_2d_0)
 
-# Sum the 1 axis
-sum_2d_1 = np.sum(axes_2d, axis=1)
-print(" Axis 1 sum:\n")
-print(sum_2d_1)
+# # Sum the 1 axis
+# sum_2d_1 = np.sum(axes_2d, axis=1)
+# print(" Axis 1 sum:\n")
+# print(sum_2d_1)
 
 
 # Concatenate arrays
-np_array_1s = np.array([[1,1,1],[1,1,1]])
-np_array_9s = np.array([[9,9,9],[9,9,9]])
+# np_array_1s = np.array([[1,1,1],[1,1,1]])
+# np_array_9s = np.array([[9,9,9],[9,9,9]])
 
-print("\nConcatenate on axis 0")
-concat_0 = np.concatenate([np_array_1s, np_array_9s], axis = 0)
-print(concat_0)
+# print("\nConcatenate on axis 0")
+# concat_0 = np.concatenate([np_array_1s, np_array_9s], axis = 0)
+# print(concat_0)
 
-print("\nConcatenate on axis 1")
-concat_1 = np.concatenate([np_array_1s, np_array_9s], axis = 1)
-print(concat_1)
+# print("\nConcatenate on axis 1")
+# concat_1 = np.concatenate([np_array_1s, np_array_9s], axis = 1)
+# print(concat_1)
 
 
 
