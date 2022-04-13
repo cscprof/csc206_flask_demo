@@ -1,4 +1,5 @@
 from asyncio.proactor_events import _ProactorBaseWritePipeTransport
+from turtle import st
 import numpy as np
 CURVE_CENTER = 80
 
@@ -15,30 +16,34 @@ CURVE_CENTER = 80
 # print(curve(grades))
 # print("\n\n")
 
-# Standard Deviaiton of grades
+# # Standard Deviaiton of grades
 # std_dev = np.std(grades)
 # avg = np.average(grades)
 # print("Standard deviation of the grades is {} and the average is {} \n".format(std_dev, avg))
 
 
-# axes_2d = np.arange(0,6).reshape([2,3])
+base = 145
+step = 26
+numcells = 12
+upper_limit = base + (step * numcells)
+axes_2d = np.arange(base, upper_limit, step).reshape([2,2,3])
 
-# # Print the array
-# print(axes_2d)
+# Print the array
+print(axes_2d)
 
-# # Sum the full array
-# sum_2d = np.sum(axes_2d)
-# print("2D sum: {} \n".format(sum_2d))
+# Sum the full array
+sum_2d = np.sum(axes_2d)
+print("2D sum: {} \n".format(sum_2d))
 
-# # Sum the 0 axis
-# sum_2d_0 = np.sum(axes_2d, axis=0)
-# print(" Axis 0 sum:\n")
-# print(sum_2d_0)
+# Sum the 0 axis
+sum_2d_0 = np.sum(axes_2d, axis=0)
+print(" Axis 0 sum:\n")
+print(sum_2d_0)
 
-# # Sum the 1 axis
-# sum_2d_1 = np.sum(axes_2d, axis=1)
-# print(" Axis 1 sum:\n")
-# print(sum_2d_1)
+# Sum the 1 axis
+sum_2d_1 = np.sum(axes_2d, axis=1)
+print(" Axis 1 sum:\n")
+print(sum_2d_1)
 
 
 # Concatenate arrays
